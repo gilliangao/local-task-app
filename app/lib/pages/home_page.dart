@@ -275,7 +275,7 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(18, 14, 18, 10),
+                  padding: const EdgeInsets.fromLTRB(18, 10, 18, 8),
                   child: Row(
                     children: [
                       PopupMenuButton<String>(
@@ -343,9 +343,9 @@ class _HomePageState extends State<HomePage> {
                       ? const SizedBox(height: 10)
                       : Column(
                           children: [
-                            const SizedBox(height: 14),
+                            const SizedBox(height: 10),
                             SizedBox(
-                              height: 126,
+                              height: 102,
                               child: ListView(
                                 padding: const EdgeInsets.symmetric(
                                   horizontal: 18,
@@ -375,12 +375,12 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
                             ),
-                            const SizedBox(height: 12),
+                            const SizedBox(height: 8),
                           ],
                         ),
                 ),
                 SizedBox(
-                  height: 52,
+                  height: 46,
                   child: ListView.separated(
                     padding: const EdgeInsets.symmetric(horizontal: 18),
                     scrollDirection: Axis.horizontal,
@@ -405,20 +405,20 @@ class _HomePageState extends State<HomePage> {
                             },
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
-                                horizontal: 16,
-                                vertical: 12,
+                                horizontal: 14,
+                                vertical: 10,
                               ),
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Icon(
                                     tab.icon,
-                                    size: 18,
+                                    size: 16,
                                     color: selected
                                         ? Colors.white
                                         : theme.colorScheme.onSurface,
                                   ),
-                                  const SizedBox(width: 8),
+                                  const SizedBox(width: 6),
                                   Text(
                                     tab.label,
                                     style: theme.textTheme.labelLarge?.copyWith(
@@ -440,14 +440,14 @@ class _HomePageState extends State<HomePage> {
                     itemCount: tabs.length,
                   ),
                 ),
-                SizedBox(height: isCalendarFocused ? 10 : 14),
+                SizedBox(height: isCalendarFocused ? 8 : 10),
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
                       18,
                       0,
                       18,
-                      isCalendarFocused ? 12 : 18,
+                      isCalendarFocused ? 10 : 14,
                     ),
                     child: AnimatedSwitcher(
                       duration: const Duration(milliseconds: 280),
@@ -538,7 +538,7 @@ class _CompactHeroBar extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
         gradient: LinearGradient(
@@ -551,7 +551,7 @@ class _CompactHeroBar extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+            padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 6),
             decoration: BoxDecoration(
               color: Colors.white.withValues(alpha: 0.16),
               borderRadius: BorderRadius.circular(999),
@@ -564,7 +564,7 @@ class _CompactHeroBar extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(width: 12),
+          const SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -574,9 +574,10 @@ class _CompactHeroBar extends StatelessWidget {
                   title,
                   style: theme.textTheme.titleLarge?.copyWith(
                     color: Colors.white,
+                    fontSize: 22,
                   ),
                 ),
-                const SizedBox(height: 2),
+                const SizedBox(height: 1),
                 Text(
                   subtitle,
                   maxLines: 1,
@@ -612,9 +613,9 @@ class _HeroPanel extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Container(
-      padding: const EdgeInsets.all(22),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(32),
+        borderRadius: BorderRadius.circular(28),
         gradient: LinearGradient(
           colors: [
             theme.colorScheme.primary.withValues(alpha: 0.95),
@@ -635,7 +636,7 @@ class _HeroPanel extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
             decoration: BoxDecoration(
               color: Colors.white.withValues(alpha: 0.16),
               borderRadius: BorderRadius.circular(999),
@@ -648,31 +649,33 @@ class _HeroPanel extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 10),
           Text(
             title,
             style: theme.textTheme.displaySmall?.copyWith(
               color: Colors.white,
               height: 1.0,
+              fontSize: 34,
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 6),
           Text(
             subtitle,
             style: theme.textTheme.bodyLarge?.copyWith(
               color: Colors.white.withValues(alpha: 0.88),
-              height: 1.45,
+              height: 1.35,
+              fontSize: 14,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 12),
           Row(
             children: [
               Icon(
                 Icons.auto_awesome_rounded,
-                size: 18,
+                size: 16,
                 color: Colors.white.withValues(alpha: 0.85),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 6),
               Text(
                 currentTab,
                 style: theme.textTheme.titleMedium?.copyWith(
@@ -705,11 +708,11 @@ class _StatCard extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Container(
-      width: 148,
-      padding: const EdgeInsets.all(14),
+      width: 132,
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: theme.colorScheme.surface.withValues(alpha: 0.8),
-        borderRadius: BorderRadius.circular(26),
+        borderRadius: BorderRadius.circular(22),
         border: Border.all(
           color: theme.colorScheme.outlineVariant.withValues(alpha: 0.5),
         ),
@@ -720,24 +723,25 @@ class _StatCard extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: 30,
-            height: 30,
+            width: 26,
+            height: 26,
             decoration: BoxDecoration(
               color: accent.withValues(alpha: 0.12),
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.circular(12),
             ),
-            child: Icon(icon, color: accent, size: 16),
+            child: Icon(icon, color: accent, size: 14),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 8),
           Text(
             value,
-            style: theme.textTheme.headlineMedium?.copyWith(fontSize: 21),
+            style: theme.textTheme.headlineMedium?.copyWith(fontSize: 18),
           ),
-          const SizedBox(height: 4),
+          const SizedBox(height: 2),
           Text(
             label,
             style: theme.textTheme.bodySmall?.copyWith(
               color: theme.colorScheme.onSurfaceVariant,
+              fontSize: 11,
             ),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
