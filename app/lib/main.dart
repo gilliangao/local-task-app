@@ -516,10 +516,19 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(titles[_currentIndex]),
         actions: [
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.language),
+            onSelected: _changeLanguage,
+            itemBuilder: (context) => const [
+              PopupMenuItem(value: 'system', child: Text('System')),
+              PopupMenuItem(value: 'en', child: Text('English')),
+              PopupMenuItem(value: 'zh', child: Text('中文')),
+            ],
+          ),
           if (_currentIndex == 3)
             IconButton(
               icon: const Icon(Icons.delete_sweep),
-              tooltip: 'Clear Completed',
+              tooltip: l10n.clearCompleted,
               onPressed: _completedTasks().isEmpty
                   ? null
                   : _confirmClearCompletedTasks,
