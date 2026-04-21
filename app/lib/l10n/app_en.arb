@@ -1,0 +1,48 @@
+{
+  "@@locale": "en",
+  "today": "Today",
+  "shortTerm": "Short Term",
+  "longTerm": "Long Term",
+  "completed": "Completed",
+  "active": "Active",
+  "addTask": "Add Task",
+  "editTask": "Edit Task",
+  "taskTitle": "Task title",
+  "enterTask": "Enter task...",
+  "section": "Section",
+  "cancel": "Cancel",
+  "add": "Add",
+  "save": "Save",
+  "delete": "Delete",
+  "deleteTask": "Delete task",
+  "clearCompleted": "Clear Completed",
+  "clear": "Clear",
+  "completedLabel": "Completed",
+  "moveToToday": "Move to Today",
+  "moveToShortTerm": "Move to Short Term",
+  "moveToLongTerm": "Move to Long Term",
+  "noActiveTasksToday": "No active tasks in Today",
+  "noActiveTasksShortTerm": "No active tasks in Short Term",
+  "noActiveTasksLongTerm": "No active tasks in Long Term",
+  "noCompletedTasks": "No completed tasks yet",
+  "deleteTaskMessage": "Delete \"{taskTitle}\"?",
+  "@deleteTaskMessage": {
+    "placeholders": {
+      "taskTitle": {}
+    }
+  },
+  "completedInSection": "Completed • {sectionName}",
+  "@completedInSection": {
+    "placeholders": {
+      "sectionName": {}
+    }
+  },
+  "clearCompletedMessage": "Delete all {count} completed tasks?",
+  "@clearCompletedMessage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
+}
