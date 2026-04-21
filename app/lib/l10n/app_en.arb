@@ -4,12 +4,28 @@
   "shortTerm": "Short Term",
   "longTerm": "Long Term",
   "completed": "Completed",
+  "overview": "Overview",
   "active": "Active",
+  "portfolioBadge": "Portfolio Build",
+  "dashboardTitle": "Task Atelier",
+  "dashboardSubtitle": "A polished planner for deep work, deadlines, and weekly rhythm.",
+  "openTasks": "Open tasks",
+  "dueSoon": "Due soon",
+  "completionRate": "Completion rate",
+  "newTask": "New Task",
+  "calendarInsights": "Calendar rhythm",
   "addTask": "Add Task",
   "editTask": "Edit Task",
   "taskTitle": "Task title",
   "enterTask": "Enter task...",
   "section": "Section",
+  "deadline": "Deadline",
+  "noDeadline": "No deadline",
+  "selectDate": "Select date",
+  "clearDate": "Clear date",
+  "systemLanguage": "System",
+  "english": "English",
+  "chinese": "Chinese",
   "cancel": "Cancel",
   "add": "Add",
   "save": "Save",
@@ -21,10 +37,25 @@
   "moveToToday": "Move to Today",
   "moveToShortTerm": "Move to Short Term",
   "moveToLongTerm": "Move to Long Term",
+  "calendar": "Calendar",
   "noActiveTasksToday": "No active tasks in Today",
   "noActiveTasksShortTerm": "No active tasks in Short Term",
   "noActiveTasksLongTerm": "No active tasks in Long Term",
   "noCompletedTasks": "No completed tasks yet",
+  "emptyStateTitle": "A clear board changes the way work feels.",
+  "emptyStateSubtitle": "Capture your next task, add a deadline, and let the workspace build momentum for you.",
+  "tasksOnDate": "Tasks on {date}",
+  "@tasksOnDate": {
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "noTasksOnDate": "No tasks on {date}",
+  "@noTasksOnDate": {
+    "placeholders": {
+      "date": {}
+    }
+  },
   "deleteTaskMessage": "Delete \"{taskTitle}\"?",
   "@deleteTaskMessage": {
     "placeholders": {

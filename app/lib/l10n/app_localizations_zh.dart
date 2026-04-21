@@ -21,7 +21,34 @@ class AppLocalizationsZh extends AppLocalizations {
   String get completed => '已完成';
 
   @override
+  String get overview => '概览';
+
+  @override
   String get active => '进行中';
+
+  @override
+  String get portfolioBadge => '作品级界面';
+
+  @override
+  String get dashboardTitle => 'Task Atelier';
+
+  @override
+  String get dashboardSubtitle => '把任务、截止时间和每周节奏放进一个更精致的工作台。';
+
+  @override
+  String get openTasks => '进行中任务';
+
+  @override
+  String get dueSoon => '临近截止';
+
+  @override
+  String get completionRate => '完成率';
+
+  @override
+  String get newTask => '新建任务';
+
+  @override
+  String get calendarInsights => '日历节奏';
 
   @override
   String get addTask => '添加任务';
@@ -37,6 +64,27 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get section => '分类';
+
+  @override
+  String get deadline => '截止日期';
+
+  @override
+  String get noDeadline => '无截止日期';
+
+  @override
+  String get selectDate => '选择日期';
+
+  @override
+  String get clearDate => '清除日期';
+
+  @override
+  String get systemLanguage => '跟随系统';
+
+  @override
+  String get english => '英文';
+
+  @override
+  String get chinese => '中文';
 
   @override
   String get cancel => '取消';
@@ -72,6 +120,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get moveToLongTerm => '移动到长期';
 
   @override
+  String get calendar => '日历';
+
+  @override
   String get noActiveTasksToday => '今日没有进行中的任务';
 
   @override
@@ -82,6 +133,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get noCompletedTasks => '还没有已完成任务';
+
+  @override
+  String get emptyStateTitle => '清爽的任务板，会让工作感觉完全不同。';
+
+  @override
+  String get emptyStateSubtitle => '先记下下一件事，再加上截止时间，让这个工作台替你建立节奏。';
+
+  @override
+  String tasksOnDate(Object date) {
+    return '$date 的任务';
+  }
+
+  @override
+  String noTasksOnDate(Object date) {
+    return '$date 没有任务';
+  }
 
   @override
   String deleteTaskMessage(Object taskTitle) {

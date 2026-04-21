@@ -4,12 +4,28 @@
   "shortTerm": "短期",
   "longTerm": "长期",
   "completed": "已完成",
+  "overview": "概览",
   "active": "进行中",
+  "portfolioBadge": "作品级界面",
+  "dashboardTitle": "Task Atelier",
+  "dashboardSubtitle": "把任务、截止时间和每周节奏放进一个更精致的工作台。",
+  "openTasks": "进行中任务",
+  "dueSoon": "临近截止",
+  "completionRate": "完成率",
+  "newTask": "新建任务",
+  "calendarInsights": "日历节奏",
   "addTask": "添加任务",
   "editTask": "编辑任务",
   "taskTitle": "任务标题",
   "enterTask": "输入任务...",
   "section": "分类",
+  "deadline": "截止日期",
+  "noDeadline": "无截止日期",
+  "selectDate": "选择日期",
+  "clearDate": "清除日期",
+  "systemLanguage": "跟随系统",
+  "english": "英文",
+  "chinese": "中文",
   "cancel": "取消",
   "add": "添加",
   "save": "保存",
@@ -21,10 +37,25 @@
   "moveToToday": "移动到今日",
   "moveToShortTerm": "移动到短期",
   "moveToLongTerm": "移动到长期",
+  "calendar": "日历",
   "noActiveTasksToday": "今日没有进行中的任务",
   "noActiveTasksShortTerm": "短期没有进行中的任务",
   "noActiveTasksLongTerm": "长期没有进行中的任务",
   "noCompletedTasks": "还没有已完成任务",
+  "emptyStateTitle": "清爽的任务板，会让工作感觉完全不同。",
+  "emptyStateSubtitle": "先记下下一件事，再加上截止时间，让这个工作台替你建立节奏。",
+  "tasksOnDate": "{date} 的任务",
+  "@tasksOnDate": {
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "noTasksOnDate": "{date} 没有任务",
+  "@noTasksOnDate": {
+    "placeholders": {
+      "date": {}
+    }
+  },
   "deleteTaskMessage": "删除“{taskTitle}”吗？",
   "@deleteTaskMessage": {
     "placeholders": {

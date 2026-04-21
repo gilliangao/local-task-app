@@ -21,7 +21,35 @@ class AppLocalizationsEn extends AppLocalizations {
   String get completed => 'Completed';
 
   @override
+  String get overview => 'Overview';
+
+  @override
   String get active => 'Active';
+
+  @override
+  String get portfolioBadge => 'Portfolio Build';
+
+  @override
+  String get dashboardTitle => 'Task Atelier';
+
+  @override
+  String get dashboardSubtitle =>
+      'A polished planner for deep work, deadlines, and weekly rhythm.';
+
+  @override
+  String get openTasks => 'Open tasks';
+
+  @override
+  String get dueSoon => 'Due soon';
+
+  @override
+  String get completionRate => 'Completion rate';
+
+  @override
+  String get newTask => 'New Task';
+
+  @override
+  String get calendarInsights => 'Calendar rhythm';
 
   @override
   String get addTask => 'Add Task';
@@ -37,6 +65,27 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get section => 'Section';
+
+  @override
+  String get deadline => 'Deadline';
+
+  @override
+  String get noDeadline => 'No deadline';
+
+  @override
+  String get selectDate => 'Select date';
+
+  @override
+  String get clearDate => 'Clear date';
+
+  @override
+  String get systemLanguage => 'System';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get chinese => 'Chinese';
 
   @override
   String get cancel => 'Cancel';
@@ -72,6 +121,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get moveToLongTerm => 'Move to Long Term';
 
   @override
+  String get calendar => 'Calendar';
+
+  @override
   String get noActiveTasksToday => 'No active tasks in Today';
 
   @override
@@ -82,6 +134,23 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noCompletedTasks => 'No completed tasks yet';
+
+  @override
+  String get emptyStateTitle => 'A clear board changes the way work feels.';
+
+  @override
+  String get emptyStateSubtitle =>
+      'Capture your next task, add a deadline, and let the workspace build momentum for you.';
+
+  @override
+  String tasksOnDate(Object date) {
+    return 'Tasks on $date';
+  }
+
+  @override
+  String noTasksOnDate(Object date) {
+    return 'No tasks on $date';
+  }
 
   @override
   String deleteTaskMessage(Object taskTitle) {

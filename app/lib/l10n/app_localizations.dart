@@ -62,7 +62,8 @@ import 'app_localizations_zh.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale)
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -70,7 +71,8 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate =
+      _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -82,17 +84,18 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
-    delegate,
-    GlobalMaterialLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-  ];
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
+        delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
-    Locale('zh')
+    Locale('zh'),
   ];
 
   /// No description provided for @today.
@@ -119,11 +122,65 @@ abstract class AppLocalizations {
   /// **'Completed'**
   String get completed;
 
+  /// No description provided for @overview.
+  ///
+  /// In en, this message translates to:
+  /// **'Overview'**
+  String get overview;
+
   /// No description provided for @active.
   ///
   /// In en, this message translates to:
   /// **'Active'**
   String get active;
+
+  /// No description provided for @portfolioBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'Portfolio Build'**
+  String get portfolioBadge;
+
+  /// No description provided for @dashboardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Task Atelier'**
+  String get dashboardTitle;
+
+  /// No description provided for @dashboardSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'A polished planner for deep work, deadlines, and weekly rhythm.'**
+  String get dashboardSubtitle;
+
+  /// No description provided for @openTasks.
+  ///
+  /// In en, this message translates to:
+  /// **'Open tasks'**
+  String get openTasks;
+
+  /// No description provided for @dueSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Due soon'**
+  String get dueSoon;
+
+  /// No description provided for @completionRate.
+  ///
+  /// In en, this message translates to:
+  /// **'Completion rate'**
+  String get completionRate;
+
+  /// No description provided for @newTask.
+  ///
+  /// In en, this message translates to:
+  /// **'New Task'**
+  String get newTask;
+
+  /// No description provided for @calendarInsights.
+  ///
+  /// In en, this message translates to:
+  /// **'Calendar rhythm'**
+  String get calendarInsights;
 
   /// No description provided for @addTask.
   ///
@@ -154,6 +211,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Section'**
   String get section;
+
+  /// No description provided for @deadline.
+  ///
+  /// In en, this message translates to:
+  /// **'Deadline'**
+  String get deadline;
+
+  /// No description provided for @noDeadline.
+  ///
+  /// In en, this message translates to:
+  /// **'No deadline'**
+  String get noDeadline;
+
+  /// No description provided for @selectDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Select date'**
+  String get selectDate;
+
+  /// No description provided for @clearDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear date'**
+  String get clearDate;
+
+  /// No description provided for @systemLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get systemLanguage;
+
+  /// No description provided for @english.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get english;
+
+  /// No description provided for @chinese.
+  ///
+  /// In en, this message translates to:
+  /// **'Chinese'**
+  String get chinese;
 
   /// No description provided for @cancel.
   ///
@@ -221,6 +320,12 @@ abstract class AppLocalizations {
   /// **'Move to Long Term'**
   String get moveToLongTerm;
 
+  /// No description provided for @calendar.
+  ///
+  /// In en, this message translates to:
+  /// **'Calendar'**
+  String get calendar;
+
   /// No description provided for @noActiveTasksToday.
   ///
   /// In en, this message translates to:
@@ -245,6 +350,30 @@ abstract class AppLocalizations {
   /// **'No completed tasks yet'**
   String get noCompletedTasks;
 
+  /// No description provided for @emptyStateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'A clear board changes the way work feels.'**
+  String get emptyStateTitle;
+
+  /// No description provided for @emptyStateSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Capture your next task, add a deadline, and let the workspace build momentum for you.'**
+  String get emptyStateSubtitle;
+
+  /// No description provided for @tasksOnDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Tasks on {date}'**
+  String tasksOnDate(Object date);
+
+  /// No description provided for @noTasksOnDate.
+  ///
+  /// In en, this message translates to:
+  /// **'No tasks on {date}'**
+  String noTasksOnDate(Object date);
+
   /// No description provided for @deleteTaskMessage.
   ///
   /// In en, this message translates to:
@@ -264,7 +393,8 @@ abstract class AppLocalizations {
   String clearCompletedMessage(int count);
 }
 
-class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate
+    extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -273,25 +403,26 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['en', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) =>
+      <String>['en', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
-
-
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'en': return AppLocalizationsEn();
-    case 'zh': return AppLocalizationsZh();
+    case 'en':
+      return AppLocalizationsEn();
+    case 'zh':
+      return AppLocalizationsZh();
   }
 
   throw FlutterError(
     'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
     'an issue with the localizations generation tool. Please file an issue '
     'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.'
+    'that was used.',
   );
 }
